@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    /* calculates div sizes by including margins and padding into them*/
+}
+
+body, html{
+    /* margin */
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width:100%;
+}
+
+.telugu{
+    font-family: 'NTR', sans-serif;
+}
+
+#bodydiv{
+    transition: opacity .5s ease-in-out;
+    /* height: calc(100% - 60px); */
+    height: 100%;
+    width:100%;
+    padding-top: 57px;
+}
+
+/* Code for making div center aligned */
+.centerAlignDiv{
+    display: flex; 
+    justify-content:center;
+    align-items: center;
+}
+
+/* code for setting the scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: black; 
+}

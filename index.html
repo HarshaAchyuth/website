@@ -1,0 +1,70 @@
+<!-- home page -->
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65034507-2"></script>
+        <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-65034507-2');
+        </script>
+        <link href="https://fonts.googleapis.com/css?family=Lato|Arizonia|Just+Another+Hand|NTR&amp;subset=telugu" rel="stylesheet"> <!--external fonts-->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--fixing the devise width-->
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> <!--bootstrap-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--font-awesome-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> <!--AngularJS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+        <link rel="stylesheet" href="css/basic.css">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/about.css">
+        <link rel="stylesheet" href="css/conctactpage.css">
+        <meta name="description" content="harshaash.website is personal blog of sri harsha achyuthuni">
+        <meta name="author" content="Achyuthuni Sri Harsha" />
+        <title>Sri Harsha Achyuthuni</title>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/bigtext.js"></script>
+        <script src="scripts/particles.js"></script>
+        <script src="scripts/particlesApp.js"></script>
+        
+    </head>
+    <body ng-app="harsha" ng-controller="harshacontroller">
+        <header> <!--header-->
+            <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+                <span class="telugu navbar-brand"> <!--Writing Sri Harsha అచ్యుతుని as brand name-->
+                    <a href="#">Sri Harsha &#3077;&#3098;&#3149;&#3119;&#3137;&#3108;&#3137;&#3112;&#3135;</a>
+                </span> <!--brand name-->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <!--toggler button-->
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav ml-auto">
+                        <li id="bloghref" class="nav-item"><a class="nav-link" href="#!blogPage">Blog</a></li>
+                        <li id="abouthref" class="nav-item"><a class="nav-link" href="#!aboutPage">About</a></li>
+                        <li id="contacthref" class="nav-item"><a class="nav-link" href="#!contactPage">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>            
+        </header>
+        <base href="/">
+        
+        <!-- The top level container. Code of various pages are replaced in this container when page opens -->
+        <div  id="bodydiv" class="container-fluid" ng-view>
+            <!-- <div class="homePageBox" id="homePageId" style="font-size: 40vmin; line-height:40vmin;">
+                <div style="padding:0px; margin:0px;">
+                    <span class="telugu">&#3077;&#3098;&#3149;&#3119;&#3137;&#3108;&#3137;&#3112;&#3135;అచ్యుతుని</span> Sri Harsha
+                </div>
+            </div> -->
+        </div>
+    
+    </body>
+</html>

@@ -1,8 +1,6 @@
 * {
     box-sizing: border-box;
-    /* calculates div sizes by including margins and padding into them*/
 }
-
 body, html{
     /* margin */
     margin: 0px;
@@ -10,7 +8,6 @@ body, html{
     height: 100%;
     width:100%;
 }
-
 .telugu{
     font-family: 'NTR', sans-serif;
 }
@@ -22,15 +19,6 @@ body, html{
     width:100%;
     padding-top: 57px;
 }
-
-/* Code for making div center aligned */
-.centerAlignDiv{
-    display: flex; 
-    justify-content:center;
-    align-items: center;
-}
-
-/* code for setting the scroll bar */
 /* width */
 ::-webkit-scrollbar {
     width: 5px;

@@ -1,4 +1,5 @@
 .aboutPageBox .aboutPageLeftBox,.aboutPageBox .aboutPageRightBox{
+    float:left; 
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -9,7 +10,7 @@
     height: 80%;
     margin: auto;
     position: relative;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .aboutPageBox .card {
@@ -59,22 +60,16 @@
     z-index: 2;   
     transform: rotateX(0deg);
 }
-.aboutPageBox .panel-body{
-     font-size: 24px;
-     line-height: 24px;
+.aboutPageBox .aboutMeText,.aboutPageBox .panel-body{
+     font-size: 1.5em;
+     line-height: 1.5em;
      font-family: 'Just Another Hand', cursive;
      text-align: left;
-     letter-spacing: 1px;
+     letter-spacing: 0.25ex;
      overflow-x:hidden;
      overflow-y: auto;
  }
  .aboutPageBox .aboutMeText{
-    font-size: 16px;
-    line-height: 24px;
-    text-align: left;
-    letter-spacing: 1px;
-    overflow-x:hidden;
-    overflow-y: auto;
     display: flex;
     position: relative;
     justify-content: center; 

@@ -1,0 +1,53 @@
+.homePageBox{
+    /* font-size: 40vmin; 
+    line-height:40vmin; */
+    color: black;
+    text-align:center;
+    font-family: 'Arizonia', cursive;
+    overflow-y: hidden;
+}
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+      }
+  }
+
+.navbar-brand a{
+    color:white; 
+    text-decoration:none;
+}
+
+ /* Small devices (landscape phones, 576px and up) */
+/* @media (min-width: 576px) {
+    .homePageBox{
+        font-size: 25vmin; 
+        line-height:25vmin;
+    }
+} */
+
+ /* Medium devices (tablets, 768px and up) */
+/* @media (min-width: 768px) {
+    .homePageBox{
+        font-size: 30vmin; 
+        line-height:30vmin;
+    }
+} */
+
+ /* Large devices (desktops, 992px and up) */
+/* @media (min-width: 992px) {
+    .homePageBox{
+        font-size: 35vmin; 
+        line-height:35vmin;
+    }
+} */
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1200px) {
+    .homePageBox{
+        font-size: 40vmin; 
+        line-height:40vmin;
+    }
+} */

@@ -2,69 +2,258 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65034507-2"></script>
-        <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-
-                gtag('config', 'UA-65034507-2');
-        </script>
-        <link href="https://fonts.googleapis.com/css?family=Lato|Arizonia|Just+Another+Hand|NTR&amp;subset=telugu" rel="stylesheet"> <!--external fonts-->
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--fixing the devise width-->
-
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> <!--bootstrap-->
+        <link href="https://fonts.googleapis.com/css?family=Arizonia|Just+Another+Hand|NTR&amp;subset=telugu" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--font-awesome-->
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> <!--AngularJS-->
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-
-        <link rel="stylesheet" href="css/basic.css">
-        <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet" href="css/about.css">
-        <link rel="stylesheet" href="css/conctactpage.css">
-        <meta name="description" content="harshaash.website is personal blog of sri harsha achyuthuni">
-        <meta name="author" content="Achyuthuni Sri Harsha" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assests/css/basic.css">
+        <link rel="stylesheet" href="assests/css/home.css">
+        <link rel="stylesheet" href="assests/css/about.css">
+        <link rel="stylesheet" href="assests/css/conctactpage.css">
         <title>Sri Harsha Achyuthuni</title>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/bigtext.js"></script>
-        <script src="scripts/particles.js"></script>
-        <script src="scripts/particlesApp.js"></script>
-        
+        <script src="assests/script/basic.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body ng-app="harsha" ng-controller="harshacontroller">
-        <header> <!--header-->
+    <body>
+        <header>
             <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-                <span class="telugu navbar-brand"> <!--Writing Sri Harsha అచ్యుతుని as brand name-->
-                    <a href="#">Sri Harsha &#3077;&#3098;&#3149;&#3119;&#3137;&#3108;&#3137;&#3112;&#3135;</a>
+                <span class="telugu navbar-brand">
+                    <a href="#" onclick="pageOpen('homePage')">Sri Harsha &#3077;&#3098;&#3149;&#3119;&#3137;&#3108;&#3137;&#3112;&#3135;</a>
                 </span> <!--brand name-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"> <!--toggler button-->
                         <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav ml-auto">
-                        <li id="bloghref" class="nav-item"><a class="nav-link" href="#!blogPage">Blog</a></li>
-                        <li id="abouthref" class="nav-item"><a class="nav-link" href="#!aboutPage">About</a></li>
-                        <li id="contacthref" class="nav-item"><a class="nav-link" href="#!contactPage">Contact</a></li>
+                    <ul class="navbar-nav">
+                        <li id="bloghref" class="nav-item"><a class="nav-link" href="#blogPage" onclick="pageOpen('blogPage')">Blog</a></li>
+                        <li id="abouthref" class="nav-item"><a class="nav-link" href="#aboutPage" onclick="pageOpen('aboutPage')">About</a></li>
+                        <li id="contacthref" class="nav-item"><a class="nav-link" href="#contactPage" onclick="pageOpen('contactPage')">Contact</a></li>
                     </ul>
                 </div>
             </nav>            
         </header>
-        <base href="/">
         
-        <!-- The top level container. Code of various pages are replaced in this container when page opens -->
-        <div  id="bodydiv" class="container-fluid" ng-view>
-            <!-- <div class="homePageBox" id="homePageId" style="font-size: 40vmin; line-height:40vmin;">
+        <div  id="bodydiv" class="container-fluid">
+            <div class="homePageBox" id="homePageId" style="font-size: 40vmin; line-height:40vmin;">
                 <div style="padding:0px; margin:0px;">
-                    <span class="telugu">&#3077;&#3098;&#3149;&#3119;&#3137;&#3108;&#3137;&#3112;&#3135;అచ్యుతుని</span> Sri Harsha
+                    <span class="telugu">&#3077;&#3098;&#3149;&#3119;&#3137;&#3108;&#3137;&#3112;&#3135;</span> Sri Harsha
                 </div>
-            </div> -->
+            </div>
         </div>
+        
+
+
+
+    <div style="display:none;">
+        <!-- home page -->
+        <div id="homePage">
+            <div class="homePageBox row" id="homePageId">
+                <div class="col-md-12 telugu" style="padding-top:60px;">&#3077;&#3098;&#3149;&#3119;&#3137;&#3108;&#3137;&#3112;&#3135; <span style="font-family: 'Arizonia', cursive;"> Sri Harsha</span></div> 
+            </div>
+        </div>
+
+        <!-- about me page -->
+        <div id="aboutPage">
+            <div class="aboutPageBox row" style="width:100%; height:100%">
+                <div class="aboutPageLeftBox col-md-6">
+                    <div class="panel" >
+                        <div class="front card" >
+                            <img src="assests/images/Personal details.jpg" style="max-width:250px;max-height:300px;" alt="Personal details">
+                        </div>
+                        <div class="back card" >
+                            <div class="cardDiv aboutMeText" >
+                                <div class="col-md-12">
+                                    <div>Personal details</div>
+                                    <div><span class="fa fa-map-marker"></span> Whitefield, Bangalore, India</div>
+                                    <div><span class="fa fa-phone"></span>Phone: <a href="tel:919019413416">+91 9019413416</a></div>                                            
+                                    <div><span class="fa fa-whatsapp" style="color:green;"></span>Whatsapp: <a  href="https://api.whatsapp.com/send?phone=919019413416">+91 9019413416</a></div>                                            
+                                    <div><span class="fa fa-envelope"></span> Email: <a href="mailto:ash51296avs@gmail.com">ash51296avs@gmail.com</a></div> 
+                                    <div><span class="fa fa-facebook" style="color:blue;"></span> Facebook: <a href="https://www.facebook.com/sri.harsha.achyuthuni" >@sriharshaachyuthuni</a></div>
+                                    <div><span class="fa fa-quora" style="color:red;"></span> Quora: <a href="https://goo.gl/BvMpuc" > Achyutuni Sri Harsha<span class="telugu">(&#3126;&#3149;&#3120;&#3136; &#3129;&#3120;&#3149;&#3127;)</span></a></div>
+                                </div>
+                            </div>
+                        </div>                            
+                    </div>
+                </div>
+                <div class="aboutPageRightBox col-md-6">
+                    <div class="panel" >
+                        <div class="front card" >
+                                <img src="assests/images/Professional details.jpg" style="max-width:250px;max-height:300px;" alt="Professional details">        
+                        </div>
+                        <div class="back card" >
+                            <div class="cardDiv" style="display:flex;" >
+                                <div class="col-md-12">
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title rightli">
+                                                <a class="btn btn-primary" style="width:100%" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Data Scientist</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse1" class="panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    Working as Data scientist at Mu-Sigma from October 2017.<br>
+                                                    Mu-Sigma is the world's largest provider of desition science solutions.<br>
+                                                    <a class="btn btn-danger" href="https://www.mu-sigma.com">More</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title rightli">
+                                                    <a class="btn btn-primary" style="width:100%" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Bachelor of Technology</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse2" class="panel-collapse collapse">
+                                                <div class="panel-body">Bachelor of technology from Amrita Vishwa Vidyapeetham in Mechanical Engineering<br>
+                                                                    CREO certified designer, knows ANSYS. Graduated with CGPA 8.98/10</div>
+                                                                    <a class="btn btn-warning" href="https://www.amrita.edu/">More</a>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title rightli">
+                                                <a class="btn btn-primary" style="width:100%" data-toggle="collapse" data-parent="#accordion" href="#collapse3">IoP Science</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse3" class="panel-collapse collapse">
+                                                <div class="panel-body">Published a paper "Parametric study of cantilever beams subjected to supersonic and hypersonic flow".<br>
+                                                                        It studies the structural effects on a aerospike of a re-entry vehicle subjected to supersonic flow.<br>
+                                                                        <button type="button" href="https://doi.org/10.1088/1757-899X/225/1/012047" class="btn btn-success">DOI</button>
+                                                                        <button type="button" href="https://goo.gl/WhppSW" class="btn btn-success">Read More</button>
+                                                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title rightli">
+                                                <a class="btn btn-primary" style="width:100%;" data-toggle="collapse" data-parent="#accordion" href="#collapse4">Linkedin</a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapse4" class="panel-collapse collapse">
+                                                <div class="panel-body"><script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+                                                    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="sri-harsha-achyuthuni-a45b7baa">
+                                                        <a class="LI-simple-link" href='https://in.linkedin.com/in/sri-harsha-achyuthuni-a45b7baa?trk=profile-badge'>Sri Harsha Achyuthuni</a>
+                                                    </div> <!-- linkedin plugin -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>                                            
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+                      
+        </div>
+
+        <!-- contact me page -->
+        <div id="contactPage">
+            <div class="conctactPageBox row mx-auto">
+                <div class="formElement col-md-6 col-sm-12 mx-auto">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeQrhzf6bs5pPs6gXwMiDk-xyHTXIS9rjeeSl7PhuymvD-9Qg/formResponse" target="_blank" method="POST">
+                        <h2>Do you want to say something?</h2>
+                        <div>
+                            <label for="cname">Name</label>
+                            <input type="text" id = "cname" class="conctactform Name" onkeyup="validateText('cname')" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Name" aria-describedby="i.desc.1633920210 i.err.1633920210" name="entry.2005620554" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="">
+                        </div>
+                        <div>
+                            <label for="cemail">Email</label>
+                            <input type="email"  id="cemail" class="conctactform Email" autocomplete="email" tabindex="0" aria-label="Your email address" name="emailAddress" value="" required="" dir="auto" data-initial-dir="auto" data-initial-value="">
+                        </div>
+                        <div class="conctactform">
+                            <label for="cphone">Phone Number</label>
+                            <input type="text" id="cphone" class="conctactform Phonenumber" onkeyup="validateNum('cphone')" jsname="YPqjbf" autocomplete="off" tabindex="0" aria-label="Phone number" aria-describedby="i.desc.1770822543 i.err.1770822543" name="entry.1166974658" value="" dir="auto" data-initial-dir="auto" data-initial-value="">
+                        </div>
+                        <div class="conctactform">
+                            <label for="ccomments">Comments</label>
+                            <textarea class="conctactform Comments" id= "ccomments" jsname="YPqjbf" data-rows="3" tabindex="0" aria-label="Comments" jscontroller="gZjhIf" jsaction="input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;" required="" name="entry.839337160" dir="auto" data-initial-dir="auto" data-initial-value="" style="height: 72px;"></textarea>
+                        </div>
+                        <div class="conctactform">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog page -->
+        <div id="blogPage">
+            <div class="blogPageBox row">
+                <div class="col-md-7 mx-auto">
+                    <!-- Title -->
+                    <h1 class="mt-4">Trial Post</h1>
+                    <!-- Date/Time -->
+                    <div>Posted on January 1, 2018 at 12:07 AM</div>
+                    <hr>
+                    <!-- Preview Image -->
+                    <img class="img-fluid rounded" src="https://siuslawbroadband.com/wp-content/uploads/2011/02/siuslaw-sunset-900x300.jpg" alt="image">
+                    <hr>
+                    <!-- Post Content -->
+                    <div class="lead">This is a trial post. It is midnight, I think I should sleep.</div>    
+                    <blockquote class="blockquote">
+                        <div class="mb-0">This is a blockquote</div>
+                        <footer class="blockquote-footer">Harsha in
+                            <cite title="Source Title">his dreams</cite>
+                        </footer>
+                    </blockquote>
+                    <div>One more paragraph. The facebook comments plugin apparently only works if it is online. Thaats great now..</div>
+                    <hr>
+                    <!-- Facebook comments plugin -->
+                    <div id="fb-root"></div>
+                    <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5"></div>
+                </div>
+                <div class="col-md-3 mx-auto"> <!-- 7+3 = 10 the rest 2 are for spacing in mx-auto-->
+                    <div class="card my-4" >
+                        <img class="card-img-top" src="assests/images/Professional details.jpg" alt="Card image cap">
+                        <div class="card-block">
+                            <h4 class="card-title">Achyuthuni Sri Harsha</h4>
+                            <div class="card-text">A data scientist by profession, Mechanical engineer by degree.</div>
+                            <a href="https://www.facebook.com/sri.harsha.achyuthuni" class="btn btn-primary mx-auto">Facebook</a>
+                        </div>
+                    </div>
+                    <!-- search -->
+                    <div class="card my-4">
+                        <h5 class="card-header">Search</h5>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Catogories -->
+                    <div class="card my-4">
+                        <h5 class="card-header">Categories</h5>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#">Web Design</a></li>
+                                        <li><a href="#">HTML</a></li>
+                                        <li><a href="#">Finite Element Method</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#">JavaScript</a></li>
+                                        <li><a href="#">CSS</a></li>
+                                        <li><a href="#">Mechanical</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>  
+            </div>
+        </div>
+    </div>
     
     </body>
 </html>
